@@ -9,7 +9,7 @@ This repository contains the code for a mini battery status display designed to 
 - Battery voltage indicated by color-changing symbol on the display
 - Designed to be discreet and integrate seamlessly with Raspberry Pi projects
 - I did the work figuring out how to make the screen work, so you don't have to
-- Reverse engineering process provided in Display_Info.md
+- Reverse engineering process provided in Display_Info.md  https://github.com/B-Boone/UPS_Hat_Display/Display_Info.md
 
 ## Components
 

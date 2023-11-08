@@ -1,0 +1,15 @@
+[Unit]
+Description=X728 Display Control Service
+After=X728_Server.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/UPS_Hat_Display/X728_Client.py
+User=pi
+WorkingDirectory=/home/pi/UPS_Hat_Display
+Restart=on-failure
+RestartSec=10
+Wants=X728_Server.service
+
+[Install]
+WantedBy=multi-user.target

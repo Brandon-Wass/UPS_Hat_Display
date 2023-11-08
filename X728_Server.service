@@ -1,0 +1,14 @@
+[Unit]
+Description=X728 UPS Monitoring Service
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/pi/UPS_Hat_Display/X728_Server.py
+User=pi
+WorkingDirectory=/home/pi/UPS_Hat_Display
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

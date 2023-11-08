@@ -105,6 +105,6 @@ pins = {
 
 ## Acknowledgments
 
-- Thanks to Geekworm for their x728 V2.3 UPS HAT and their prewritten code for checking battery status on the board. It sure made the X728_Server.py file much quicker to to write using the PLD file as a template.
+- Thanks to Geekworm for their x728 V2.3 UPS HAT and their prewritten code for checking battery status on the board. It sure made the X728_Server.py file much quicker to to write using the PLD and ASD files as a template.
 
 ## ENJOY!

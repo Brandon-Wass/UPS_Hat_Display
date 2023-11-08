@@ -8,8 +8,6 @@ Breakout Info
 
 ----------------------
 
-##########
-
 Pin 1 High:
 
 - Pin 2 low 		= left digit top segment

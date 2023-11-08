@@ -55,7 +55,7 @@ Before you begin, ensure you have the following:
 
 ## Configuration
 
-- Modify the GPIO pins in the X728_Client.py file to match your setup. For example:
+- Modify the GPIO pins in the `X728_Client.py` file to match your setup. For example:
 
 ```python
 pins = {
@@ -67,7 +67,7 @@ pins = {
 
 - No need to use `sudo` permissions to run the Python scripts, only to make the `crontab` entries or move the .service files into the service directory.
 
-- Start the Server-side script first (`X728_Server.py`) to read the battery status from the HAT and write to `battery.json`:
+- Start the server-side script first (`X728_Server.py`) to read the battery status from the HAT and write to `battery.json`:
 
     ```bash
     python3 X728_Server.py

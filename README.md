@@ -6,7 +6,7 @@ This repository contains the code for a mini battery status display designed to 
 
 - Real-time battery capacity up to 99 percent
 - Indicates whether external power is provided to the HAT
-- Battery voltage indicated by changing color symbol on the display
+- Battery voltage indicated by color-changing symbol on the display
 - Designed to be discreet and integrate seamlessly with Raspberry Pi projects
 - I did the work figuring out how to make the screen work, so you don't have to
 - Reverse engineering process provided in Display_Info.md
@@ -15,7 +15,7 @@ This repository contains the code for a mini battery status display designed to 
 
 - Raspberry Pi (compatible with Pi 3/4/etc.)
 - Geekworm x728 UPS HAT
-- Prprietary mini LED display (10mm x 8mm) sourced from SMOK SpaceMan 10K PRO
+- Proprietary mini LED display (10mm x 8mm) sourced from SMOK SpaceMan 10K PRO
 - 5-pin GPIO connection
 
 ## Prerequisites
@@ -45,7 +45,7 @@ Before you begin, ensure you have the following:
     cd UPS_Hat_Display
     ```
 
-3. Modify the permissions of the python scripts, if necessary:
+3. Modify the permissions of the Python scripts, if necessary:
 
    ```bash
    chmod +x X728_Server.py X728_Client.py
@@ -65,7 +65,7 @@ pins = {
 
 ## Usage
 
-- No need to use `sudo` permissions to run the python scripts, only to make the `crontab` entries or move the .service files into the service directory.
+- No need to use `sudo` permissions to run the Python scripts, only to make the `crontab` entries or move the .service files into the service directory.
 
 - Start the Server-side script first (`X728_Server.py`) to read the battery status from the HAT and write to `battery.json`:
 
@@ -87,12 +87,15 @@ pins = {
     - Works great with no flicker on 4B model without adjusting `REFRESH_RATE`
     - Older models may produce slightly to moderately noticable flickering on the display due to their limited CPU performance
 
-- Service not starting the scripts automatically:
-  - Give the python scripts execute permissions
+- Service or `crontab` not starting the scripts automatically:
+  - Verify the service files are correctly set up in systemd
+  - Check for spelling or directory mistakes
+  - Give the Python scripts execute permissions
 
 - Display not showing the proper information, ie: numbers are unrecognizable, or wrong areas of the display are lit up
   - Check your GPIO connections and connections to the display
-    - The displays have a tiny `1` on them to mark `pin1`, and the rest go in order to `pin5`
+    - The displays have a tiny `1` on them to mark `Pin1`, and the rest go in order to `Pin5`
+    - Ensure you are connected to the proper GPIO pins or have modified the `X728_Client.py` file to use the correct GPIO pins
   - Run the `X728_Client.py` script in a terminal or IDE to read any errors that may be happening, such as unable to read .json file
     - Use `chmod` to give read/write permissions for the `battery.json` file
 

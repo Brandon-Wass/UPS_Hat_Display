@@ -40,10 +40,10 @@ class LEDDisplay:
                 3: [(self.pins['Pin2'], self.pins['Pin5']), (self.pins['Pin4'], self.pins['Pin1']), (self.pins['Pin3'], self.pins['Pin5']), (self.pins['Pin4'], self.pins['Pin3']), (self.pins['Pin3'], self.pins['Pin2'])],
                 4: [(self.pins['Pin3'], self.pins['Pin4']), (self.pins['Pin3'], self.pins['Pin5']), (self.pins['Pin4'], self.pins['Pin1']), (self.pins['Pin4'], self.pins['Pin3'])],
                 5: [(self.pins['Pin2'], self.pins['Pin5']), (self.pins['Pin3'], self.pins['Pin4']), (self.pins['Pin3'], self.pins['Pin5']), (self.pins['Pin4'], self.pins['Pin3']), (self.pins['Pin3'], self.pins['Pin2'])],
-                6: [(self.pins['Pin3'], self.pins['Pin4']), (self.pins['Pin3'], self.pins['Pin1']), (self.pins['Pin3'], self.pins['Pin2']), (self.pins['Pin4'], self.pins['Pin3']), (self.pins['Pin3'], self.pins['Pin5'])],
+                6: [(self.pins['Pin3'], self.pins['Pin4']), (self.pins['Pin3'], self.pins['Pin1']), (self.pins['Pin3'], self.pins['Pin2']), (self.pins['Pin4'], self.pins['Pin3']), (self.pins['Pin3'], self.pins['Pin5']), (self.pins['Pin2'], self.pins['Pin5'])],
                 7: [(self.pins['Pin2'], self.pins['Pin5']), (self.pins['Pin4'], self.pins['Pin1']), (self.pins['Pin4'], self.pins['Pin3'])],
                 8: [(self.pins['Pin2'], self.pins['Pin5']), (self.pins['Pin3'], self.pins['Pin1']), (self.pins['Pin3'], self.pins['Pin2']), (self.pins['Pin3'], self.pins['Pin4']), (self.pins['Pin4'], self.pins['Pin1']), (self.pins['Pin4'], self.pins['Pin3']), (self.pins['Pin3'], self.pins['Pin5'])],
-                9: [(self.pins['Pin3'], self.pins['Pin4']), (self.pins['Pin2'], self.pins['Pin5']), (self.pins['Pin4'], self.pins['Pin1']), (self.pins['Pin3'], self.pins['Pin5']), (self.pins['Pin4'], self.pins['Pin3'])]
+                9: [(self.pins['Pin3'], self.pins['Pin4']), (self.pins['Pin2'], self.pins['Pin5']), (self.pins['Pin4'], self.pins['Pin1']), (self.pins['Pin3'], self.pins['Pin5']), (self.pins['Pin4'], self.pins['Pin3']), (self.pins['Pin3'], self.pins['Pin2'])]
             },
             'percent_symbol': {
                 'on': [(self.pins['Pin4'], self.pins['Pin2'])],

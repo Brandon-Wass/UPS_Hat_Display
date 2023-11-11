@@ -8,8 +8,7 @@ This repository contains the code for a mini battery status display designed to 
 - Indicates whether external power is provided to the HAT
 - Battery voltage indicated by color-changing symbol on the display
 - Designed to be discreet and integrate seamlessly with Raspberry Pi projects
-- I did the work figuring out how to make the screen work, so you don't have to
-- Reverse engineering process provided in Display_Info.md  https://github.com/B-Boone/UPS_Hat_Display/blob/main/Display_Info.md
+- Includes reverse engineering details in Display_Info.md.  https://github.com/B-Boone/UPS_Hat_Display/blob/main/Display_Info.md
 
 ## Components
 
@@ -82,7 +81,7 @@ pins = {
 ## Troubleshooting
 
 - Display flickering:
-  - Modify the `REFRESH_RATE` in the `X728_Client.py` script, but be careful as this has already been tuned to provide the smoothest operation between Pi and the display, or
+  - Modify the `REFRESH_RATE` in the `X728_Client.py` script, but be careful as this has already been tuned to provide the smoothest operation between Pi and the display
   - Use a stronger Raspberry Pi
     - Works great with no flicker on 4B model without adjusting `REFRESH_RATE`
     - Older models may produce slightly to moderately noticable flickering on the display due to their limited CPU performance

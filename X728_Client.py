@@ -4,7 +4,7 @@ from threading import Thread, Event
 from time import sleep
 
 class LEDDisplay:
-    REFRESH_RATE = 0.001
+    REFRESH_RATE = 0.0005
     BATTERY_FILE_PATH = 'battery.json'
 
     def __init__(self):
@@ -64,6 +64,8 @@ class LEDDisplay:
             GPIO.setup(pin, GPIO.IN)
 
     def set_segment(self, pin_high, pin_low):
+        for pin in self.pins.values():
+            GPIO.setup(pin, GPIO.IN)
         GPIO.setup(pin_high, GPIO.OUT)
         GPIO.setup(pin_low, GPIO.OUT)
         GPIO.output(pin_high, GPIO.HIGH)
@@ -83,8 +85,8 @@ class LEDDisplay:
             self.clear_segments()
             self.display_segment(self.segment_mappings['left_digit'][self.left_number[0]])
             self.display_segment(self.segment_mappings['right_digit'][self.right_number[0]])
-            self.display_segment(self.segment_mappings['percent_symbol'][self.percent_symbol['off']])
-            self.display_segment(self.segment_mappings['indicator_light'][self.indicator_light['off']])
+            self.display_segment(self.segment_mappings['percent_symbol'][self.percent_symbol[0]])
+            self.display_segment(self.segment_mappings['indicator_light'][self.indicator_light[0]])
             sleep(self.REFRESH_RATE)
 
     def read_battery_file(self):
